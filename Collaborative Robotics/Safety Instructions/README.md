@@ -9,7 +9,7 @@ Dobot Magician arm is capable in movin in the following highlighted areas. Befor
 ![FOV picture](<./25392_dobot range of motion.jpg>)
 
 ## Software Setup:
-1. Download the Dobot Link and Dobot Lab from the (here)[https://www.dobot.us/download-center/]
+1. Download the Dobot Link and Dobot Lab from the [here](https://www.dobot.us/download-center/)
 2. Follow the instruction in the download files. However, for each "install" button you must click install and let the installation run 3 times for the software to fully install.
 3. A successful installation of Dobot Link should look like a tiny icon in your tray, and Dobot Lab should be a launchable app
 4. to launch dobotlink: pull up the application's icon in the tray, click and select "launch developer interface" then select "device test" In the connect row, select your robot arm and connect
