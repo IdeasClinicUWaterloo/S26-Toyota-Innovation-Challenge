@@ -20,7 +20,7 @@ Each team will be provided with the following equipment:
 
 
 ## Must Read: Robot Arm Set Up & Safety Training
-Please read through the safety operation procedure in [here](https://github.com/IdeasClinicUWaterloo/S26-toyota-innovation-challenge/tree/docs/Collaborative%20Robotics/Safety%20Instructions) before operating the provide robot arm. Failure to do so may result in personal property damange or even injuries.
+Please read through the safety operation procedure in [here](https://github.com/IdeasClinicUWaterloo/S26-toyota-innovation-challenge/tree/docs/Collaborative_Robotics/Safety%20Instructions) before operating the provided robot arm. Failure to do so may result in damage to personal property or even injuries.
 
 ## Usage
 
