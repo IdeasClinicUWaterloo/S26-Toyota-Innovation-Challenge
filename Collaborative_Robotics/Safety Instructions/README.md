@@ -2,18 +2,18 @@
 
 This document outlines the safety procedures that must be followed while operating the robotic arm.
 
-The arms provides does not come with any native sensing capabilities. Its movement entirely depends on the robot's motor encoder data. Hence, human monitoring is needed to ensure the robot does not reach its movement limits, and does not crash into items its unintended to contact.
+The arms do not come with any native sensing capabilities. Its movement entirely depends on the robot's motor encoder data. Hence, human monitoring is needed to ensure the robot does not reach its movement limits, and does not crash into items it is not intended to contact.
 
 ## Before Operation:
-Dobot Magician arm is capable in movin in the following highlighted areas. Before powering on the robot, ensure this area is free of any obstacles, such as personal items. At the same time, ensure the electrical wiring and the pheumatic pump hose is secured so it does not bloc the robot's movement.
+Dobot Magician arm is capable in movin in the following highlighted areas. Before powering on the robot, ensure this area is free of any obstacles, such as personal items. At the same time, ensure the electrical wiring and the pneumatic pump hose is secured so it does not block the robot's movement.
 ![FOV picture](<./25392_dobot range of motion.jpg>)
 
 ## Software Setup:
 1. Download the Dobot Link and Dobot Lab from the [here](https://www.dobot.us/download-center/)
 2. Follow the instruction in the download files. However, for each "install" button you must click install and let the installation run 3 times for the software to fully install.
 3. A successful installation of Dobot Link should look like a tiny icon in your tray, and Dobot Lab should be a launchable app
-4. to launch dobotlink: pull up the application's icon in the tray, click and select "launch developer interface" then select "device test" In the connect row, select your robot arm and connect
-5. to launch dobotlab: launch the application, then select the tab with the python logo. Click the conenct button on top of that interface
+4. to launch dobotlink: pull up the application's icon in the tray, click and select "launch developer interface," then select "device test." In the connect row, select your robot arm and connect
+5. to launch dobotlab: launch the application, then select the tab with the Python logo. Click the conenct button on top of that interface
 
 ## Common Protocols for Robot Malfunction (Please be prepared to perform any of the steps below as soon as troubek starts)
 ### Locate the Following Emergency Switch Locations
