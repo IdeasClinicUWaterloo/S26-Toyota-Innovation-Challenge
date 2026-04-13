@@ -10,7 +10,13 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 - Robot arm that allows teleoperation or hand mimicry 
 - Identify the correct object and hand over to a human worker 
 - Safety feature or human collision avoidance mechanism  
-- Friendly robot: social robot-human interaction 
+- Friendly robot: social robot-human interaction
+
+## Kit Introduction:
+Each team will be provided with the following equipment: 
+1. A Dobot Magician arm with a gripper at the tip
+2. A Orbbec camera
+3. Camera Stand to mount camera
 
 
 ## Must Read: Robot Arm Set Up & Safety Training
