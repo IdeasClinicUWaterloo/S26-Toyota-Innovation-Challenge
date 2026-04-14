@@ -4,7 +4,7 @@ Created By: Engineering IDEAs Clinic Co-op Students
 
 ## Quick Links
 
-[Predictive Failure](/Predictive_Failure), [Autonomous Fleet Coordination](/Autonomous_Fleets), [Collaborative Robotics](/Collaborative_Robotics)
+[Fault Prediction](/Fault_Prediction), [Autonomous Fleet Coordination](/Autonomous_Fleets), [Collaborative Robotics](/Collaborative_Robotics)
 
 # Your Mission
 
@@ -13,7 +13,7 @@ As the manufacturing landscape enters a new era of volatility, Toyota Motor Manu
 
 # Subproblems
 
-## Predictive Failure and Fault Detection
+## Fault Prediction
 
 Modern manufacturing depends on hundreds of highly reliable machines working together to sustain efficiency and productivity. However, despite advanced equipment, unexpected machine downtime remains a significant issue. It costs industries millions of dollars each year through lost output, operational delays, and higher maintenance expenses.
 <br> <br>
@@ -25,6 +25,8 @@ This challenge invites students to design and develop intelligent systems aimed 
 - Create a dashboard to monitor machine states
 - Install basic sensors on machines to assess their status
 - Design/Program testing procedures that check machine health
+
+Learn More: [Fault Prediction Subproblem](/Fault_Prediction)
 
 ## Autonomous Fleet Coordination and Pathfinding
 
@@ -41,6 +43,8 @@ Your challenge is to place two robots inside an enclosed perimeter and to have t
 - Different robots with the same instructions
 - Identical robots with different instructions
 
+Learn More: [Autonomous Fleet Coordination Subproblem](/Autonomous_Fleets)
+
 ## Collaborative Robotics
 
 Robotics are growing increasingly common in manufacturing/warehouse settings to assist humans with various tasks. Traditionally, robots are in cages where human workers must stay out of during their operation. Toyota would like to take an innovative approach, where production workers and robots collaborate to achieve productivity boosts on their factory floor. This means that the robot and the human worker will be working on the same task but handling different parts of the task.
@@ -54,6 +58,8 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 - Identify the correct object and hand over to a human worker
 - Safety feature or human collision avoidance mechanism
 - Friendly robot: social robot-human interaction
+
+Learn More: [Collaborative Robotics Subproblem](/Collaborative_Robotics)
 
 # Resources
 
