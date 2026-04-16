@@ -13,6 +13,60 @@ This challenge invites students to design and develop intelligent systems aimed 
 - Install basic sensors on machines to assess their status
 - Design/Program testing procedures that assess machine health
 
+## Suggested Roadmap
+
+Machine Learning (ML) is a way to build programs that learn patterns from data instead of being explicitly programmed with rules. In this challenge, you can use ML to analyze machine telemetry and predict failures before they happen.
+
+If you’re comfortable with Python, you already have everything you need to get started. The process can be broken into a few simple steps:
+
+#### 1. Choose a Problem and Dataset
+
+Start by defining what you want to predict. For example:
+
+- Detect when a machine is about to fail
+- Classify normal vs abnormal behavior
+
+Then pick a dataset that supports your goal (e.g., the provided telemetry data or an open-source dataset).
+
+#### 2. Research and Choose an ML Approach
+
+Look into simple, well-documented techniques first. Some common starting points:
+
+- Classification models (e.g., Logistic Regression, Decision Trees)
+- Time-series methods (for sequential sensor data)
+
+Focus on understanding _why_ a method fits your problem rather than choosing something complex - your project will be evaluated not just on results, but on the quality of your reasoning, the choices you make, and the insights you draw from your model.
+
+#### 3. Clean and Prepare Data
+
+Real-world data is often messy. You will likely need to:
+
+- Handle missing or incorrect values
+- Normalize or scale features (e.g., temperature, current)
+  Select relevant features for your model
+
+This step is critical - good data preparation often matters more than the model itself.
+
+#### 4. Train the Model
+
+Use your cleaned dataset to train the model:
+
+- Split your data into training and testing sets
+- Train on the training set
+- Evaluate performance on unseen data
+
+Python libraries like `scikit-learn`, `pandas`, and `numpy` are commonly used here.
+
+#### 5. Display and Interpret Results
+
+Finally, present your results in a clear and meaningful way:
+
+- Accuracy, precision/recall, or error metrics
+- Graphs showing predictions vs actual behavior
+- A simple dashboard or visualization
+
+The goal is not just to build a model, but to show that it provides useful insight into machine behavior.
+
 ## Resources
 
 - **Toyota Telemetry Data** (accessed via [Google Drive](https://drive.google.com/drive/folders/1WH95WIw2kX9aDbsBe2MpxEcpnStesaIB?usp=sharing))
