@@ -119,6 +119,27 @@ This folder contains starter material for the student hackathon. It is intended 
 
 ## Development Setup
 
+### Arduino Environment
+
+The robot sketches use the TETRIX PRIZM Arduino library. Before uploading either `.ino` file, install the PRIZM ZIP library into your Arduino environment.
+
+Suggested setup:
+
+1. Download or locate the [PRIZM Arduino library ZIP file](https://go.pitsco.com/tetrix-prizm-legacy-resources?#downloads).
+2. In the Arduino IDE, go to `Sketch` > `Include Library` > `Add .ZIP Library...`.
+3. Select the PRIZM library ZIP file.
+4. Restart the Arduino IDE if the library does not appear immediately.
+
+Pitsco's PRIZM coding guide can be used as a reference for the PRIZM library and Arduino setup: [TETRIX PRIZM Coding Essentials](https://asset.pitsco.com/sharedimages/resources/44720_tetrix_prizm_codingessentialssg.pdf).
+
+For board and port configuration:
+
+1. Connect the PRIZM controller to the computer over USB.
+2. In the Arduino IDE, select `Tools` > `Board` > `Arduino AVR Boards` > `Arduino Uno`.
+3. The PRIZM board emulates an Arduino Uno, so use `Arduino Uno` even though the physical controller is the PRIZM board.
+4. Select the matching serial port under `Tools` > `Port`. On Windows this is usually a `COM` port, such as `COM5`.
+5. If multiple ports are listed, unplug and reconnect the PRIZM controller to identify which port appears.
+
 ### Python Environment
 
 The Python starter code expects a local environment with the packages listed in `starter-code/python-scripts/requirements.txt`.
@@ -151,6 +172,13 @@ Choose the Arduino sketch that matches your use case:
 
 - Use `testing-bot-controls.ino` for simple manual drive and gripper testing
 - Use `telemetry_and_communicate_to_aribiter.ino` for telemetry, waypoint following, and arbiter communication
+
+Before uploading:
+
+- Install the PRIZM ZIP library in the Arduino IDE
+- Select `Arduino Uno` as the board
+- Select the serial port for the connected PRIZM controller
+- Confirm the sketch includes `#include <PRIZM.h>` without compile errors
 
 ### 2. Start the Central Arbiter
 
