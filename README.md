@@ -86,3 +86,22 @@ You will be evaluated based on the following equally-weighted criteria. Please u
 | **Safety**         | Little to no risk to user; meets Canadian safety regulations            |
 | **Human Centricity** | How does this help humans?                                            |
 | **Presentation**   | Clearly explained; depth of knowledge; application of relevant concepts |
+
+
+## Schedule
+
+| Day      | Time        | Activity                                      |
+|----------|------------|-----------------------------------------------|
+| Friday   | 5:00–6:30 PM | Orientation and Presentations                |
+|    | 6:30–7:00 PM | Choose Teams and Problem Space              |    
+| Saturday | 9:00 AM     | Meet Stakeholders & Brainstorm Solutions   |  
+|  |  | Building Begins!       |
+|  | 12:00 PM    | Lunch                                       
+|  |  | Build Time continues   |
+|  | 5:00 PM     | Day’s End                                   |
+| Sunday   | 9:00 AM     | Start of Day                                
+|  |  | Build Time continues   |
+|    | 12:00 PM    | Lunch                                       
+|  |  | Build Time continues   |
+|    | 2:30 PM     | Project Judging                             |
+|    | 4:00 PM     | Results and Closing Remarks                 |
