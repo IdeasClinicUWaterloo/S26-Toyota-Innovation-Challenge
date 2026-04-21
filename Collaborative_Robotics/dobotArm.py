@@ -78,9 +78,9 @@ def initialize_robot(api):
 """
     CHANGE: Switched from using Cartesian Linear to a Joint Space PTP mode
 """
-def move_to_xyz(api,x,y,z):
+def move_to_xyz(api,x,y,z,rHead=0):
     cmdIndx = -1
-    execCmd = dType.SetPTPCmd(api,dType.PTPMode.PTPMOVJXYZMode,x,y,z,0,isQueued=0)[0]
+    execCmd = dType.SetPTPCmd(api,dType.PTPMode.PTPMOVJXYZMode,x,y,z,rHead,isQueued=0)[0]
     #Allow the command to complete. The robot will stop moving when it's done
     while execCmd > dType.GetQueuedCmdCurrentIndex(api)[0]:
         dType.dSleep(25)

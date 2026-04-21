@@ -1,3 +1,22 @@
+#This code is a simplified implementation of a collaborative robotics system that detects plates and targets using computer vision, 
+#and then commands a Dobot robotic arm to pick and place objects accordingly. The system operates in three phases: scanning for plates, 
+#scanning for targets, and executing the pick/place operations. 
+#Stability checks are implemented to ensure reliable detection before proceeding to the next phase.
+
+# Note: there are parameters that are useful to the successful operation of the robot arm. Read through the code before running the program.
+
+# How to use: 
+# 1. Ensure you have the Dobot robotic arm set up and connected to your computer.
+# 2. Place the plates (drop zones) and targets (red blocks) within the camera's
+# field of view.
+# 3. Run the script. The system will first scan for plates, then targets, and finally execute the pick/place operations based on the detected positions.
+# 4. Monitor the console output and the video feed for feedback on the system's status and operations
+
+#Other Useful Codes you can use:
+#dobotArm.move_to_xyz(api, pick_x, pick_y, Z_SAFE, rHead): moves the robot to the specified (x, y, z) coordinates with a specified rotation for the end effector (rHead). Z_SAFE is a predefined constant that ensures the robot maintains a safe height to avoid collisions when moving horizontally.
+
+
+
 import dobotArm
 import lib.DobotDllType as dType
 import numpy as np
@@ -6,18 +25,20 @@ import time
 
 
 """CONSTANTS"""
-Z_SAFE = 40
-Z_PICK = -25
-STABILITY_LIMIT = 60  # at least how many # of frames needed consider stable
+
+Z_SAFE = 40 #what is the clearance distance for the robot arm to avoid collisions when moving horizontally?
+Z_PICK = -25 #what is the  height for the robot claw to successfully pick up the target?
+STABILITY_LIMIT = 60  #how many consecutive frames of stable detection before we "lock in" the positions and move to the next phase? (at 30fps, 60 frames is about 2 seconds)
 PIXEL_TOLERANCE = 10  #object can move at most this # of pixels to be considered stationary
 
-machine_state = "scanning plate"
+machine_state = "scanning plate" 
 
-# --- INITIALIZATION  ---
+# --- INITIALIZATION FOR CAMERA TRANSFORMATION ---
+# MAKE SURE THAT YOU HAVE RAN calibrateCamera.py FIRST TO GENERATE THE camera_params.npz FILE
 api = dType.load()
 cap = cv2.VideoCapture(0)
 H_matrix = np.load("HomographyMatrix.npy")
-data = np.load("Collaborative_Robotics\camera_params.npz")
+data = np.load("./camera_params.npz")
 camera_matrix = data["camera_matrix"]
 dist_coeffs   = data["dist_coeffs"]
 
@@ -33,6 +54,12 @@ def pixel_to_robot(u, v, H):
     xy /= xy[2]
     return xy[0], xy[1]
 
+
+# State machine logic to control the flow of the program through the three phases: scanning for plates, scanning for targets, and executing pick/place operations.
+# THIS STATE MACHINE IS TOO SIMPLE. Can you think of logics that should change the robot's sequnece of actions?
+# Ex: what if the robot fails to pick up a target? should it retry? should it go back to scanning for targets in case the target was moved? what if a new plate is added during the pick/place phase?
+# What if a human's hand is in sight during pick/place phase? (safety first!)
+
 def next_state():
     global machine_state
     if machine_state == "scanning plate":
@@ -47,7 +74,8 @@ def next_state():
 
 
 # ---------------------------------------------------------
-# PHASE 1: DETECT PLATE ARRAY
+# PHASE 1: DETECT Part Drop Zones (Plates)
+# this script assumes a metallic circular plate as the drop zone, but you can modify the detection logic to fit your specific use case.
 # ---------------------------------------------------------
 def phase_detect_plates():
     print("\n[PHASE 1] Scanning for drop zones. Waiting for stability...")
@@ -90,7 +118,9 @@ def phase_detect_plates():
  
 
 # ---------------------------------------------------------
-# PHASE 2: DETECT TARGET ARRAY (Red Blocks)
+# PHASE 2: DETECT Red velcros to pick up (Red Blocks)
+# this script assumes the targets to be picked up are red blocks
+# be aware your target maynot be red, and they may not be rectangular! You will need to modify the detection logic to fit your specific use case.
 # ---------------------------------------------------------
 def phase_detect_targets():
     print("\n[PHASE 2] Scanning for targets. Waiting for stability...")
@@ -151,6 +181,9 @@ def phase_detect_targets():
 
 # ---------------------------------------------------------
 # PHASE 3: PICK/PLACE LOOP
+# This function assumes 1 drop zone only has 1 part, and executes the pick/place operations in batches.
+# if you are picking up rigid car parts, would you still be able to move directly to the object and to the drop zone? 
+# Do you need collision avoidance? Think about if the robot gripper accidentally hits the plate or other parts on the way to the target, what would happen? How would you modify the robot's movement logic to avoid collisions?
 # ---------------------------------------------------------
 def phase_execute_batch(api, pick_list, drop_list):
     cv2.VideoCapture(0)
@@ -173,6 +206,9 @@ def phase_execute_batch(api, pick_list, drop_list):
         # --- PICK SEQUENCE ---
         dobotArm.move_to_xyz(api, pick_x, pick_y, Z_SAFE)
         dobotArm.move_to_xyz(api, pick_x, pick_y, Z_PICK)
+        #optional alternate function call method to include a rotation of the gripper angle
+        #dobotArm.move_to_xyz(api, pick_x, pick_y, Z_SAFE, 45) 
+
         dobotArm.close_gripper(api)
         dobotArm.move_to_xyz(api, pick_x, pick_y, Z_SAFE)
 
@@ -205,6 +241,7 @@ def phase_execute_batch(api, pick_list, drop_list):
 
 # ---------------------------------------------------------
 # MAIN EXECUTION
+# contains an oversimplified state machine that runs the three phases sequentially. You can modify the logic to fit your specific use case.
 # ---------------------------------------------------------
 dobotArm.initialize_robot(api)
 dobotArm.open_gripper(api)
@@ -228,16 +265,6 @@ while machine_state == "pick place":
         next_state()
     else: break
 
-# 1. Run Scanners
-# all_drops = phase_detect_plates()
-# all_parts = phase_detect_targets()
-
-
-# # # 2. Run Robot
-# if len(all_parts) > 0 and len(all_drops) > 0:
-#     phase_execute_batch(api, all_parts, all_drops)
-# else:
-#     print("Error: Missing parts or plates. Process aborted.")
 
 cap.release()
 cv2.destroyAllWindows()

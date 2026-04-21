@@ -27,7 +27,7 @@ Use the tools provided to program to robot to
 3. Detect a human hand in the camera frame
 4. Avoid a human hand while picking up the part (Red Brake Caliper)
 
- <img src="/assets/colab-rr.png" width="50%">
+ <img src="assets/colab-rr.png" width="50%">
  ----------------------------------------------------------------------------------------------------
 
 ## Starter Material Introduction:
@@ -37,15 +37,15 @@ Each team will be provided with the following equipment:
 3. Camera Stand to mount camera
 The image below shows an example setup of the camera and the robot arm. This setup allows the camera to see the robot arm's location as well as the table. You can modify this setup according to your design needs.
 Setup: 
-<img src="/Collaborative_Robotics/IMG_6707.jpeg" width="20%">
+<img src="assets/IMG_6707.jpeg" width="20%">
 
 Clipping Camera Stand:
 
-<img src="/Collaborative_Robotics/IMG_6706.jpeg" width="20%">
+<img src="assets/IMG_6706.jpeg" width="20%">
 
 Each team will also be provided with 3 red tags to run the starter code. Teams can also request for 3 printed car parts as a part of their development.
 
-<img src="/Collaborative_Robotics/IMG_6708.jpeg" width="20%">
+<img src="assets/IMG_6708.jpeg" width="20%">
 
 # Introduction to Starter Source Code
 The code provided for you in this folder is intented to help you get started on the development. It contains a working pick-place script for the robot arm that takes in vision from the camera and uses a state machine for control.
