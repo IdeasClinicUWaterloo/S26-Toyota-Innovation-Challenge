@@ -13,12 +13,23 @@ Dobot Magician arm is capable in moving in the following highlighted areas. Befo
 2. Follow the instruction in the download files. It it normal for windows to flash multiple times after clicking a button. 
     - For each "install" button you must click install and let the installation run 3 times for the software to fully install.
 
-3. Lanch the two apps after installation: Dobot Link shoud appear as an icon in tray, and dobot lab should be directly launchable [insert image here]
-4. To launch dobotlink: pull up the application's icon in the tray, click and select "launch developer interface," then select "device test." In the connect row, select your robot arm and connect [insert step by step here]
-5. To launch dobotlab: launch the application, then select the tab with the Python logo. Click the conenct button on top of that interface [insert step by step here]
+3. Lanch the two apps after installation: Dobot Link shoud appear as an icon in tray, and dobot lab should be directly launchable 
+
+<img src="./tray.png" alt="location of tray icon" width="50%">
+
+4. To launch dobotlink: pull up the application's icon in the tray, click and select "launch developer interface," then select "device test." In the connect row, select your robot arm and connect 
+<img src="./image (6).png" alt="location of tray icon" width="50%">
+<img src="./image (7).png" alt="location of tray icon" width="50%">
+<img src="./image (8).png" alt="location of tray icon" width="50%">
+
+
+
+5. To launch dobotlab: launch the application, then select the tab with the Python logo. Click the conenct button on top of that interface 
+<img src="./image (9).png" alt="location of tray icon" width="50%">
 
 ## Robot Connect & Power Up:
-1. press the button with a "lock" icon on the robot arm and move it to the approximate poste as shown here. Place the robot arm near the centre of the operating range ![image pose](<./S26-toyota-innovation-challenge/Collaborative_Robotics/Safety Instructions/Screenshot 2026-04-20 at 10.30.17 AM.png>). 
+1. press the button with a "lock" icon on the robot arm and move it to the approximate poste as shown here
+ ![image pose](<./Screenshot 2026-04-20 at 10.30.17 AM.png>)
 2. connect the robot to your compuer by plugging in its USB cable
 3. press the power button on the robot's base. The robot should power up, beep after waiting for a moment. Robot should being its initialization process bu conducting a sweep over its entire operation region.
 4. Now you should be prepared to run your script! Check back in the main folder for how to run the given source code
@@ -34,12 +45,19 @@ Everytime a script is ran, the robot will compete an initialization again by swe
 
 ## Common Protocols for Robot Malfunction (Please be prepared to perform any of the steps below as soon as trouble starts)
 ### Locate the Following Emergency Switch Locations
-1. Main Power Cable: located at the back fo the robot base ![Power Cable](<./S26-toyota-innovation-challenge/Collaborative_Robotics/Safety Instructions/Screenshot 2026-04-20 at 10.19.53 AM.png>)
-2. Booting Switch: metallic press button located at the top of the robots base ![image here](<./S26-toyota-innovation-challenge/Collaborative_Robotics/Safety Instructions/Screenshot 2026-04-20 at 10.21.11 AM.png/)
-3. Robot Joint Unlocking Switch: Located near the robot gripper. A plastic press button with a lock symbol on it. ![image here](<./S26-toyota-innovation-challenge/Collaborative_Robotics/Safety Instructions/Screenshot 2026-04-20 at 10.30.17 AM.png/)
+1. Main Power Cable: located at the back fo the robot base 
+
+<img src="./Screenshot 2026-04-20 at 10.19.53 AM.png" alt="Power Cable" width="50%">
+
+2. Booting Switch: metallic press button located at the top of the robots base 
+<img src="./Screenshot 2026-04-20 at 10.21.11 AM.png" alt="Power Cable" width="50%">
+
+
+3. Robot Joint Unlocking Switch: Located near the robot gripper. A plastic press button with a lock symbol on it.
+ <img src="./Screenshot 2026-04-20 at 10.30.17 AM.png" alt="image here" width="50%">
+
 4. Robot Status Light: located at top of the robot's base. 
     - How to read: Green light = normal operation, yellow light: setup in progress, red light = trouble flagged
-
 ### Common Failure Scenario
 TL,DR: if robot begin to move with unexpected or potentially dangerous behavior, hold down the unlocking button and pull the power cable. 
 
