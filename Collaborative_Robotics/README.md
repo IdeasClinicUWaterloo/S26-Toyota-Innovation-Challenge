@@ -5,12 +5,6 @@ Robotics are growing increasingly common in manufacturing/warehouse settings to 
 You are tasked with designing the control of a desktop robotic arm that resembles a scaled-down version of a high torque arm found in TMMC, to work along with humans to achieve automative assembly tasks. Engineers at TMMC have already enabled the robot arm to complete a pick-and-place motion according to human actions. Your role is to continue developing this function to achieve more robot collaboration capabilities. The robot should consider efficiency, the safety of users around it, as well as the comfort of the users who interact with the robots.  
 
 ## Potential Solutions: 
-
-- Robot that places parts delivered by human worker into the correct assembly position  
-- Robot arm that allows teleoperation or hand mimicry 
-- Identify the correct object and hand over to a human worker 
-- Safety feature or human collision avoidance mechanism  
-- Friendly robot: social robot-human interaction
 - **Vision/Perception**: improve the current computer vision to achieve the detection of the car parts
 - **Human-machine interface**: add in functions to detect worker's hand motions and steer robot away
 - **Machine Controls**: improvement for robotic arm to accurately pick up car parts and place it in the corresponding box
@@ -21,14 +15,35 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 
 The following directions can be a starting direction for your development. You are not just limited to these directives; feel free to create something that has not been mentioned in the following.
 
-Use the tools provided to program to robot to
-1. Pick up Velcro using the robotic arm
-2. Pick up 3D printed car part (Red Brake Caliper) using the robotic arm
-3. Detect a human hand in the camera frame
-4. Avoid a human hand while picking up the part (Red Brake Caliper)
+Milestones:
+1. Make velcros visible to to robot
+Suggested Development: Modify pickCVBlock.py parameters such that the camera can see the red velcros on the table
+hints: 
+- check out `phase_detect_targets()` function. Don't be afraid to use AI tools to explain the function!
+- velcros are smaller in camera fov in the challenge setup we provide
+- lighting can affect how red the valcros appear to the camera
 
- <img src="assets/colab-rr.png" width="50%">
- ----------------------------------------------------------------------------------------------------
+2. Velcro pick&place with robot arm 
+Suggested Development: Pick up Velcro using the robotic arm and drop it off to a designated location
+- run the pickCVBlock.py, adjust the control algorithm for a smooth robotic motion
+
+3. Pick up 3D printed car part (Red Brake Caliper) using the robotic arm
+Suggested Developent: improve the vision detection for velcro tags so it is robust against the brake caliper's irregular shape
+- be aware the car parts might not be in the same color as the velcros!
+- consider: how should the gripper grip the calipers to be able to pick them up
+
+4. Detect a human hand in the camera frame
+Suggested Development: Modify the computer vision program to send an alert when a human hand is in frame
+- approaches can include basic color detection, movement tracking, or object detection
+
+4. Avoid a human hand while picking up the part (Red Brake Caliper)
+Suggested Development: think about how should the robot arm react to prevent collision with the human user. Is it stopping? Is it steering away? Is it something else?
+- determine how should the robot arm should be moving or controlled
+- determine if you should send a notification to the humans
+
+ <img src="../assets/colab-rr.png" width="80%">
+
+ ---
 
 ## Starter Material Introduction:
 Each team will be provided with the following equipment: 
@@ -36,7 +51,9 @@ Each team will be provided with the following equipment:
 2. A Orbbec camera
 3. Camera Stand to mount camera
 The image below shows an example setup of the camera and the robot arm. This setup allows the camera to see the robot arm's location as well as the table. You can modify this setup according to your design needs.
+
 Setup: 
+
 <img src="assets/IMG_6707.jpeg" width="20%">
 
 Clipping Camera Stand:
@@ -77,17 +94,17 @@ Note: if you are using a different camera as provided in the challenge, you need
 6. press space again to continue. the robot will repeat step 3-5 for more points, continue until the scrip finishes running
 
 ## Robot Pick-Place Script
-a basic script implementing a detect part/pick place function has been provided to you as a starter code. Feel free to base your solution off of this script, or feel free to created something new!
-[how to use here: tell them to calibrate the robot arm for a correct z ]
+a basic script implementing a detect part/pick place function has been provided to you as a starter code.Check the code comments to see what it does. Feel free to base your solution off of this script, or feel free to created something new!
 
 
 
 ## Basic Robot Control
 Refer to `testDobot.py` for basic Dobot control codes
 
-Notes
+**Notes**
 
 - Do not modify the lib folder (unless you're sure of what you're doing) -> it includes the DLLs to interface with DobotLink
+- dobotArm.py contains the python wrapper functions. Try to call from this library unless absolutely needed. Only modify the functions inside if you know what you are doing
 
 
 
