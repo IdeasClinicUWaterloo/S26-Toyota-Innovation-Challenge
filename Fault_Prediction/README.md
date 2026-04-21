@@ -15,6 +15,7 @@ This challenge invites students to design and develop intelligent systems aimed 
 
 ## Recommended Roadmap
 The following directions can be a starting direction for your development. You are not just limited to these directives; feel free to create something that has not been mentioned in the following.
+
  <img src="/assets/fault-rr.png" width="50%">
 
 Machine Learning (ML) is a way to build programs that learn patterns from data instead of being explicitly programmed with rules. In this challenge, you can use ML to analyze machine telemetry and predict failures before they happen.
