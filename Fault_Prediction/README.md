@@ -13,7 +13,7 @@ This challenge invites students to design and develop intelligent systems aimed 
 - Install basic sensors on machines to assess their status
 - Design/Program testing procedures that assess machine health
 
-## Suggested Roadmap
+## Recommended Roadmap
 
 Machine Learning (ML) is a way to build programs that learn patterns from data instead of being explicitly programmed with rules. In this challenge, you can use ML to analyze machine telemetry and predict failures before they happen.
 
