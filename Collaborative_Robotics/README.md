@@ -21,11 +21,13 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 
 The following directions can be a starting direction for your development. You are not just limited to these directives; feel free to create something that has not been mentioned in the following.
 
-Use the tools provided to program to robot to 
- a. Pick up Velcro
- b. Pick up 3D printed car part (Red Brake Caliper)
- c. Detect Hand in Frame
- d. Avoid hand while picking up part (Red Brake Caliper)
+Use the tools provided to program to robot to
+1. Pick up Velcro using the robotic arm
+2. Pick up 3D printed car part (Red Brake Caliper) using the robotic arm
+3. Detect a human hand in the camera frame
+4. Avoid a human hand while picking up the part (Red Brake Caliper)
+
+ <img src="/assets/colab-rr.png" width="50%">
  ----------------------------------------------------------------------------------------------------
 
 ## Starter Material Introduction:
