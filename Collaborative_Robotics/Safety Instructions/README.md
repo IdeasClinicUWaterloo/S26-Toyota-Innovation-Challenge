@@ -5,7 +5,7 @@ This document outlines the safety procedures that must be followed while operati
 The arms do not come with any native sensing capabilities. Its movement entirely depends on the robot's motor encoder data. Hence, human monitoring is needed to ensure the robot does not reach its movement limits, and does not crash into items it is not intended to contact.
 
 ## Before Operation:
-Dobot Magician arm is capable in movin in the following highlighted areas. Before powering on the robot, ensure this area is free of any obstacles, such as personal items. At the same time, ensure the electrical wiring and the pneumatic pump hose is secured so it does not block the robot's movement.
+Dobot Magician arm is capable in moving in the following highlighted areas. Before powering on the robot, ensure this area is free of any obstacles, such as personal items. At the same time, ensure the electrical wiring and the pneumatic pump hose is secured so it does not block the robot's movement.
 ![FOV picture](<./25392_dobot range of motion.jpg>)
 
 ## Software Setup:
@@ -48,7 +48,7 @@ TL,DR: if robot begin to move with unexpected or potentially dangerous behavior,
 | Robot gets caught in a limit position or a physical obstacle    | Robot makes a clicking movement sound     |  Hold down the join unlocking swtich and hold the arm, and power off the main switch. Restart robot connect and power up steps |
 | Robot's Status Light turns red    | Robot does not respond to any programs   |  1. Connect robot through dobot lab 2. Click on the sweep icon to clear warnings 3. Disconnect robot arm from dobot lab|
  
-## Congrats on getting through the safety training! You can now proceed to using the sorucecode.
+## Congrats on getting through the safety training! You can now proceed to using the source code.
 
 
    
