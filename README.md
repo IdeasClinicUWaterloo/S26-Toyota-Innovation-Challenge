@@ -70,6 +70,8 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 
 Learn More: [Collaborative Robotics Subproblem](/Collaborative_Robotics)
 
-# Resources
+# Resources and Kits
 
-Resources and Kit information can be found in the folders for the respective subproblem.
+Resources and Kit information can be found in the folders for the respective subproblem. 
+
+To sign out a kit, go to the sign out table and speak to a coop. You will have to go through safety training for some of the kits.
