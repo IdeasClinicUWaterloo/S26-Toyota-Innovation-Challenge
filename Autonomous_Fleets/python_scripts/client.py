@@ -3,14 +3,17 @@ import os
 import socket
 import threading
 import time
-
+import argparse
 import serial
 from dotenv import load_dotenv
 
 # ----------------------------
 # Configuration
 # ----------------------------
-load_dotenv()
+parser = argparse.ArgumentParser()
+parser.add_argument("--env", default="../.env", help="Path to env file")
+args = parser.parse_args()
+load_dotenv(args.env)
 
 SERVER_HOST = os.getenv("SERVER_HOST_IP_ADDRESS")
 SERVER_PORT = int(os.getenv("SERVER_PORT", "9000"))

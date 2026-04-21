@@ -18,23 +18,25 @@ The Python side has three jobs:
 
 `client.py` is the connector between the PRIZM robot and the central arbiter.
 
-Configuration comes from `.env`:
+Configuration comes from the `.env` file:
 
 - `SERVER_HOST_IP_ADDRESS` is the operator computer running `central-arbiter.py`.
 - `SERVER_PORT` defaults to `9000`.
 - `LOCAL_SERIAL_PORT` is the local serial device connected to the robot.
 - `SERIAL_BAUD` defaults to `115200`.
-- `ROBOT_ID` is the robot identity that appears in the GUI.
+- `ROBOT_ID` is the robot identity that appears in the GUI (Make sure this matches the firmware in the PRIZM Robot)
 - `CLIENT_NAME` is an optional human-readable laptop name.
+
+To connect the a robot (lets say Robot_A) to the Central Arbiter Server via the client, run: `python central-arbiter --env ../robot_a.env` where `robot_a.env` contains the appropriate values to connect to the robot.
 
 The main flow is:
 
-1. Open the serial port.
-2. Connect to the arbiter TCP server.
-3. Send a `hello` message.
-4. Start a background thread for messages from the arbiter.
-5. Start a heartbeat thread.
-6. Keep reading serial telemetry and forwarding it to the arbiter.
+1.  Open the serial port.
+2.  Connect to the arbiter TCP server.
+3.  Send a `hello` message.
+4.  Start a background thread for messages from the arbiter.
+5.  Start a heartbeat thread.
+6.  Keep reading serial telemetry and forwarding it to the arbiter.
 
 Two helper functions are important when changing the protocol:
 
@@ -124,5 +126,5 @@ When adding buttons, follow the existing pattern:
 - If the client prints a serial error, verify `LOCAL_SERIAL_PORT`, USB connection, and baud rate.
 - If telemetry reaches the client but not the GUI, inspect the TCP logs in `client.py` and `central-arbiter.py`.
 - If commands reach the client but the robot ignores them, check that `robot_id` in `.env` matches `ROBOT_ID` in the Arduino sketch.
+- if commands reach the client but the robot ignores them, on ESP32 enabled PRIZM bots you can connect to the ESP32 and read the Serial Monitor logs to debug.
 - If path motion looks wrong, recalibrate wheel diameter, wheel base, motor directions, and starting pose in the Arduino sketch.
-
