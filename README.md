@@ -19,6 +19,8 @@ Modern manufacturing depends on hundreds of highly reliable machines working tog
 <br> <br>
 This challenge invites students to design and develop intelligent systems aimed at minimizing such disruptions. Participants are encouraged to explore a wide range of solutions, including Machine Learning models, sensor-based monitoring systems, or integrated robotic and sensor arrays that can continuously track machine performance.  
 <br>
+<img src="/assets/fault.png" width="50%">
+
 **Potential Solutions:**
 
 - Train an AI model using robot telemetry data to detect failure
@@ -33,6 +35,8 @@ Learn More: [Fault Prediction Subproblem](/Fault_Prediction)
 AGVs (Automated Guided Vehicles) can be used together to complete tasks that would normally require multiple humans and heavy machinery. These robots are commonly used in Toyota’s manufacturing facilities to deliver parts to various places around the floor. The ideal AGV will minimize the time of delivery while ensuring the safety of workers on the floor.  
 <br>
 Your challenge is to place two robots inside an enclosed perimeter and to have them collaboratively search for a target item (3D printed car door). They should navigate to the target item and acquire it without collision and finally bring it back to the desired location.
+
+<img src="/assets/fleet.png" width="50%">
 
 **Potential solutions:**
 
@@ -50,6 +54,9 @@ Learn More: [Autonomous Fleet Coordination Subproblem](/Autonomous_Fleets)
 Robotics are growing increasingly common in manufacturing/warehouse settings to assist humans with various tasks. Traditionally, robots are in cages where human workers must stay out of during their operation. Toyota would like to take an innovative approach, where production workers and robots collaborate to achieve productivity boosts on their factory floor. This means that the robot and the human worker will be working on the same task but handling different parts of the task.
 <br> <br>
 You are tasked with designing the control of a desktop robotic arm that resembles a scaled-down version of a high torque arm found in TMMC, to work along with humans to achieve automative assembly tasks. The robot should consider efficiency, safety of users around it, as well as the comfortability of the users who interact with the robots.
+
+<img src="/assets/colab.png" width="50%">
+
 
 **Potential Solutions:**
 
