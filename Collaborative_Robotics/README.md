@@ -11,18 +11,21 @@ You are tasked with designing the control of a desktop robotic arm that resemble
 - Identify the correct object and hand over to a human worker 
 - Safety feature or human collision avoidance mechanism  
 - Friendly robot: social robot-human interaction
-
-
-## Recommend Area of Development: 
-
-The following directions can be a starting direction for your development. You are not just limited to these focuses; feel free to create something that has not been mentioned in the following list.
-
 - **Vision/Perception**: improve the current computer vision to achieve the detection of the car parts
 - **Human-machine interface**: add in functions to detect worker's hand motions and steer robot away
 - **Machine Controls**: improvement for robotic arm to accurately pick up car parts and place it in the corresponding box
 - **Friendly Robots**: how should the robot behave to feel like a companion to workers instead of replacement
-- **More areas to discover**: what do you think the current robotic arm should accomplish to collaborate human workers
+- **More areas to discover**: what do you think the current robotic arm should accomplish to collaborate human worke
 
+## Recommend Roadmap: 
+
+The following directions can be a starting direction for your development. You are not just limited to these directives; feel free to create something that has not been mentioned in the following.
+
+Use the tools provided to program to robot to 
+ a. Pick up Velcro
+ b. Pick up 3D printed car part (Red Brake Caliper)
+ c. Detect Hand in Frame
+ d. Avoid hand while picking up part (Red Brake Caliper)
  ----------------------------------------------------------------------------------------------------
 
 ## Starter Material Introduction:
@@ -56,7 +59,7 @@ Please read through the safety operation procedure in [here](https://github.com/
 5. if you every unplugged the robot arm, rerun the steps above the confirm the communication port is correct
 
 ## camera calibration
-This script is needed for the camera to properly reconigze where the red tags are located and connect the camera graphic to the robot's movement. 
+This script is needed for the camera to properly recognize where the red tags are located and connect the camera graphic to the robot's movement. 
 
 Note: if you are using a different camera as provided in the challenge, you need to run `calibrateCamera.py`. This requires you to have a 4x4 ArUco board -> or any other similar calibration tool.
 
@@ -68,7 +71,7 @@ Note: if you are using a different camera as provided in the challenge, you need
 6. press space again to continue. the robot will repeat step 3-5 for more points, continue until the scrip finishes running
 
 ## Robot Pick-Place Script
-a basic script implementing a detect part/pick place unfction has been provided to you as a starter code. Feel free to base your solution off of this script, or feel free to created something new!
+a basic script implementing a detect part/pick place function has been provided to you as a starter code. Feel free to base your solution off of this script, or feel free to created something new!
 [how to use here: tell them to calibrate the robot arm for a correct z ]
 
 
