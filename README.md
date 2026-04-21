@@ -1,3 +1,5 @@
+<img src="/assets/tic-banner.png" width="100%">
+
 # Welcome to the 2026 Toyota Innovation Challenge!
 
 Created By: Engineering IDEAs Clinic Co-op Students
