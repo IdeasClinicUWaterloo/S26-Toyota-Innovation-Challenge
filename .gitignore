@@ -1,0 +1,6 @@
+Autonomous_Fleets/.env
+Autonomous_Fleets/esp32_firmware/env.h
+Autonomous_Fleets/python_scripts/__pycache__/*
+Collaborative_Robotics/__pycache__/*
+Collaborative_Robotics/lib/__pycache__/*
+.vscode/

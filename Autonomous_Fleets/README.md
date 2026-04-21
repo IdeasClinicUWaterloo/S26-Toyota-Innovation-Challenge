@@ -104,13 +104,13 @@ This folder contains starter material for the student hackathon. It is intended 
 
 ### Included Components
 
-- `python-scripts/central-arbiter.py`
+- `python_scripts/central-arbiter.py`
   Central laptop/server process that accepts robot connections, displays telemetry in a GUI, sends commands, and supports a two-robot coordinated traverse mode.
-- `python-scripts/client.py`
+- `python_scripts/client.py`
   Laptop-side bridge that connects one robot to the central arbiter over TCP and forwards commands to the robot over serial.
-- `python-scripts/gui.py`
+- `python_scripts/gui.py`
   Telemetry dashboard with robot status, arena visualization, manual controls, test-path buttons, and grid-based coordination controls.
-- `python-scripts/messages.py`
+- `python_scripts/messages.py`
   Shared message definitions for telemetry, path assignment, acknowledgements, pause/resume/stop, gripper toggle, and heartbeat messages.
 - `prizm_firmware/testing-bot-controls/testing-bot-controls.ino`
   Simple Arduino/PRIZM sketch for basic manual movement and gripper testing over serial commands.
@@ -144,7 +144,7 @@ For board and port configuration:
 
 ### Python Environment
 
-The Python starter code expects a local environment with the packages listed in `python-scripts/requirements.txt`.
+The Python starter code expects a local environment with the packages listed in `python_scripts/requirements.txt`.
 
 Example workflow:
 
@@ -185,7 +185,7 @@ Before uploading:
 
 ### 2. Start the Central Arbiter
 
-Run `python-scripts/central-arbiter.py` on the machine acting as the server/operator station.
+Run `python_scripts/central-arbiter.py` on the machine acting as the server/operator station.
 
 The arbiter:
 
@@ -196,7 +196,7 @@ The arbiter:
 
 ### 3. Start a Robot Client
 
-Run `python-scripts/client.py` on the laptop connected to a robot controller.
+Run `python_scripts/client.py` on the laptop connected to a robot controller.
 
 The client:
 
