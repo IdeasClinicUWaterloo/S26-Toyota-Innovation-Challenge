@@ -109,7 +109,7 @@ This folder contains starter material for the student hackathon. It is intended 
 - `python_scripts/central-arbiter.py`
   Central laptop/server process that accepts robot connections, displays telemetry in a GUI, sends commands, and supports a two-robot coordinated traverse mode.
 - `python_scripts/client.py`
-  Laptop-side bridge that connects one robot to the central arbiter over TCP and forwards commands to the robot over serial.
+  Laptop-side bridge that connects one robot to the central arbiter over TCP and forwards commands to the robot over serial or TCP.
 - `python_scripts/gui.py`
   Telemetry dashboard with robot status, arena visualization, manual controls, test-path buttons, and grid-based coordination controls.
 - `python_scripts/messages.py`
@@ -207,6 +207,8 @@ The client:
 - Registers the robot with a `hello` message
 - Forwards robot telemetry upstream
 - Relays path, stop, pause, resume, and gripper commands back to the robot
+
+To run the command you have to pass an `.env` file as an argument, for example if you want to connect to robot_a then you run `python client.py --env ../robot_a.env`
 
 ### 4. Test and Extend
 

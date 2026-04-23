@@ -27,7 +27,7 @@ Configuration comes from the `.env` file:
 - `ROBOT_ID` is the robot identity that appears in the GUI (Make sure this matches the firmware in the PRIZM Robot)
 - `CLIENT_NAME` is an optional human-readable laptop name.
 
-To connect the a robot (lets say Robot_A) to the Central Arbiter Server via the client, run: `python central-arbiter --env ../robot_a.env` where `robot_a.env` contains the appropriate values to connect to the robot.
+To connect the a robot (lets say Robot_A) to the Central Arbiter Server via the client, run: `python client.py --env ../robot_a.env` where `robot_a.env` contains the appropriate values to connect to the robot.
 
 The main flow is:
 
