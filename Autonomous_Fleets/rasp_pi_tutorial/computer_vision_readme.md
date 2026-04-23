@@ -16,8 +16,8 @@ AprilTags are a visual fiducial system (2D barcodes) used for robotics and compu
 Install OpenCV and the AprilTag library on your Raspberry Pi by running these 1 by 1 in terminal:
 
 ```bash
-sudo apt-get update && \
-sudo apt-get install -y python3-pip cmake libatlas-base-dev libgl1-mesa-glx && \
+sudo apt-get update 
+sudo apt-get install -y python3-pip cmake libatlas-base-dev libgl1-mesa-glx 
 pip3 install opencv-python numpy pupil-apriltags --break-system-packages
 ```
 
